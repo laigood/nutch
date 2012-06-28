@@ -29,31 +29,29 @@ import java.util.Collection;
 import java.util.HashSet;
 
 import org.apache.avro.util.Utf8;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.apache.hadoop.conf.Configuration;
-import org.apache.nutch.util.Bytes;
 import org.apache.html.dom.HTMLDocumentImpl;
 import org.apache.nutch.metadata.Nutch;
 import org.apache.nutch.parse.HTMLMetaTags;
-import org.apache.nutch.parse.ParseFilters;
 import org.apache.nutch.parse.Outlink;
 import org.apache.nutch.parse.OutlinkExtractor;
 import org.apache.nutch.parse.Parse;
+import org.apache.nutch.parse.ParseFilters;
 import org.apache.nutch.parse.ParseStatusCodes;
 import org.apache.nutch.parse.ParseStatusUtils;
 import org.apache.nutch.parse.ParseUtil;
 import org.apache.nutch.storage.ParseStatus;
 import org.apache.nutch.storage.WebPage;
 import org.apache.nutch.storage.WebPage.Field;
+import org.apache.nutch.util.Bytes;
 import org.apache.nutch.util.MimeUtil;
 import org.apache.nutch.util.NutchConfiguration;
 import org.apache.nutch.util.TableUtil;
 import org.apache.tika.metadata.Metadata;
-import org.apache.tika.mime.MimeType;
 import org.apache.tika.parser.ParseContext;
 import org.apache.tika.parser.Parser;
-import org.apache.tika.parser.html.HtmlMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.DocumentFragment;
 
 /**
